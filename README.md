@@ -74,4 +74,4 @@ Projeto criado por Danton Tomacheski. Sinta-se à vontade para explorar, contrib
 
 ---
 
-[![Pixel Heart](https://em-content.zobj.net/source/microsoft-teams/363/purple-heart_1f49c.png)](https://github.com/DantonTomacheski/portifolio)
+[![Solo Avatar](src/images/solo-avatar.png)](https://github.com/DantonTomacheski/portifolio)
