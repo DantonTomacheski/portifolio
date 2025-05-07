@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎮 Meu Portfolio Gamificado
 
-## Getting Started
+Bem-vindo ao **Meu Portfolio Gamificado**! Este projeto é uma experiência visual inspirada em pixel-art e estética de jogos retrô, com um toque moderno graças ao Next.js e Tailwind CSS.
 
-First, run the development server:
+---
+
+## ✨ Temática & Estilo
+
+- **Fontes:**
+  - Pixelada: `"Press Start 2P", monospace`
+  - Moderna: `"Inter", sans-serif`
+- **Cores do Tema:**
+  - Fundo escuro: `#2F283A`
+  - Texto claro: `#E0D8E8`
+  - Primária: `#8E60D1`
+  - Secundária: `#60D18E`
+  - Acento: `#D1BE60`
+  - Bordas: `#1E1A24`
+- **Sombras Pixeladas:**
+  - `--shadow-pixel-sm: 2px 2px 0px 0px var(--color-game-border);`
+  - `--shadow-pixel-md: 4px 4px 0px 0px var(--color-game-border);`
+
+---
+
+## 🖥️ Efeitos Visuais
+
+- **CRT Effect:**
+  - Simula linhas e distorção de monitores antigos para um clima nostálgico.
+- **Barra de Rolagem Customizada:**
+  - Scrollbar estilizada com cores do tema e bordas pixeladas.
+
+---
+
+## 🚀 Como Rodar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tecnologias
 
-## Learn More
+- [Next.js](https://nextjs.org/) 14+
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Customização
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Você pode alterar facilmente as cores, fontes e efeitos editando o arquivo [`src/app/globals.css`](src/app/globals.css).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Estrutura
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/` — Páginas e layouts principais
+- `src/data/` — Dados do portfólio
+- `src/images/` — Imagens e avatares
+
+---
+
+## 👾 Sobre
+
+Projeto criado por Danton Tomacheski. Sinta-se à vontade para explorar, contribuir ou se inspirar!
+
+---
+
+> "A estética retrô não é apenas visual, é uma experiência!"
+
+---
+
+[![Pixel Heart](https://em-content.zobj.net/source/microsoft-teams/363/purple-heart_1f49c.png)](https://github.com/DantonTomacheski/portifolio)
