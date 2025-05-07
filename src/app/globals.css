@@ -1,26 +1,90 @@
+/* styles/globals.css */
+
+/* 1. Importar fontes externas */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* 2. Importar Tailwind CSS */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 3. Definir o tema personalizado usando o bloco @theme */
+@theme {
+  /* Fontes */
+  --font-pixel: "Press Start 2P", monospace;
+  --font-sans: "Inter", sans-serif;
+
+  /* Cores */
+  --color-game-bg: #2F283A;
+  --color-game-bg-light: #4E435D;
+  --color-game-text: #E0D8E8;
+  --color-game-text-dark: #A093AE;
+  --color-game-primary: #8E60D1;
+  --color-game-secondary: #60D18E;
+  --color-game-accent: #D1BE60;
+  --color-game-border: #1E1A24;
+  /* Cores adicionais do tema original, caso precise */
+  /*
+  --color-game-brown-dark: #4A3F35;
+  --color-game-brown-light: #7B6D5E;
+  --color-game-green-table: #3A5944;
+  --color-game-red-cap: #C74C4A;
+  --color-game-blue-button: #4A7DC7;
+  --color-game-yellow-orb: #F7D038;
+  --color-game-orange-orb: #F78C38;
+  --color-game-purple-orb: #A34CF7;
+  */
+
+  /* Sombras - Definindo como variáveis para consistência no estilo pixelado */
+  --shadow-pixel-sm: 2px 2px 0px 0px var(--color-game-border);
+  --shadow-pixel-md: 4px 4px 0px 0px var(--color-game-border);
+  --shadow-pixel-lg: 6px 6px 0px 0px var(--color-game-border);
+  --shadow-pixel-inset-sm: inset 2px 2px 0px 0px var(--color-game-border);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 4. Aplicar estilos base usando as variáveis CSS do tema */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-game-bg);
+  color: var(--color-game-text);
+  font-family: var(--font-sans); /* Fonte padrão do corpo */
+}
+
+/* Efeito CRT global */
+.crt-effect::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.20) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
+  z-index: 2000;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Estilização da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-game-bg-light);
+  box-shadow: var(--shadow-pixel-inset-sm);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-game-primary);
+  border-radius: 2px;
+  border: 2px solid var(--color-game-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-game-accent);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }

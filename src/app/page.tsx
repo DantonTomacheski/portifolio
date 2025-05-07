@@ -1,102 +1,99 @@
-import Image from "next/image";
+// app/page.tsx (Página Inicial - O "Lobby" do Jogo)
+import Link from 'next/link';
+import Image from 'next/image'; // Importar o componente Image do Next.js
+import { portfolioData } from '../data/portfolioData';
+import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiAward, FiBriefcase, FiStar, FiUser } from 'react-icons/fi'; // Ícones para contato e botões
+import avatarDanton from '../images/solo-avatar.png';
 
-export default function Home() {
+// Componente para o "NPC" Danton
+const DantonNPC = () => (
+  <div className="relative mb-8 text-center">
+    {/* Avatar pixelado do Danton usando next/image */}
+    <div className="mx-auto mb-4 w-32 h-32 md:w-40 md:h-40 pixel-border rounded-full relative shadow-pixel-md bg-game-bg">
+      <Image
+        src={avatarDanton} // Caminho para sua imagem na pasta public/images/
+        alt={`Avatar de ${portfolioData.name}`}
+        layout="fill" // Faz a imagem preencher o contêiner div
+        objectFit="cover" // Garante que a imagem cubra o espaço sem distorcer, pode cortar um pouco
+        className="rounded-full" // Garante que a imagem em si também seja arredondada se não for quadrada
+        priority // Opcional: Carrega a imagem com prioridade se for LCP (Largest Contentful Paint)
+      />
+    </div>
+    <h1 className="font-pixel text-3xl md:text-4xl text-game-accent mb-2">
+      {portfolioData.name}
+    </h1>
+    <p className="font-pixel text-lg md:text-xl text-game-text-dark">
+      {portfolioData.title}
+    </p>
+    <p className="text-sm text-game-text-dark mt-3 max-w-md mx-auto px-2">
+      "Olá, aventureiro! Bem-vindo à minha jornada. Escolha sua quest para começar e explorar meu universo de código!"
+    </p>
+  </div>
+);
+
+// Interface para as props do QuestButton para incluir ícone
+interface QuestButtonProps {
+  href: string;
+  children: React.ReactNode;
+  icon?: React.ReactElement; // Ícone opcional
+}
+
+// Componente para os botões de navegação (Quests)
+const QuestButton = ({ href, children, icon }: QuestButtonProps) => (
+  <Link href={href} passHref>
+    <button className="pixel-button w-full sm:w-auto text-base md:text-lg mb-3 sm:mb-4 transform hover:scale-105 transition-transform duration-150 ease-out flex items-center justify-center px-3 py-3">
+      {icon && <span className="mr-2 h-5 w-5">{icon}</span>}
+      {children}
+    </button>
+  </Link>
+);
+
+// Página Inicial
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 md:p-8 bg-game-bg-light pattern-dots pattern-game-bg pattern-bg-fixed pattern-opacity-20">
+      <div className="pixel-box w-full max-w-3xl text-center shadow-pixel-lg animate-fadeIn bg-game-bg" style={{ animationDelay: '0.1s' }}>
+        <header className="my-6 md:my-8">
+          <p className="font-pixel text-xl md:text-2xl text-game-accent mb-2">
+            Toda jornada dev começa com uma escolha...
+          </p>
+          <p className="text-sm text-game-text-dark px-2">
+            Explore meu mundo de código, criatividade e missões concluídas!
+          </p>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <DantonNPC />
+
+        {/* Seções como "Quests" ou "Áreas do Mapa" */}
+        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mb-8 px-4 md:px-6">
+          <QuestButton href="/sobre" icon={<FiUser />}>Sobre Mim (Status)</QuestButton>
+          <QuestButton href="/experiencias" icon={<FiBriefcase />}>Experiências (Log)</QuestButton>
+          <QuestButton href="/projetos" icon={<FiAward />}>Projetos (Conquistas)</QuestButton>
+          <QuestButton href="/habilidades" icon={<FiStar />}>Habilidades (Talentos)</QuestButton>
+        </nav>
+
+        {/* Contato Rápido */}
+        <div className="mt-8 pt-6 border-t-2 border-game-border">
+          <h3 className="font-pixel text-xl text-game-primary mb-4">Conecte-se:</h3>
+          <div className="flex justify-center space-x-5 md:space-x-6">
+            <a href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub de Danton Tomacheski" className="text-game-text hover:text-game-accent transition-colors transform hover:scale-110">
+              <FiGithub size={30} />
+            </a>
+            <a href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Danton Tomacheski" className="text-game-text hover:text-game-accent transition-colors transform hover:scale-110">
+              <FiLinkedin size={30} />
+            </a>
+            <a href={`mailto:${portfolioData.contact.email}`} aria-label="Email para Danton Tomacheski" className="text-game-text hover:text-game-accent transition-colors transform hover:scale-110">
+              <FiMail size={30} />
+            </a>
+          </div>
+           <p className="text-sm text-game-text-dark mt-4 flex items-center justify-center">
+            <FiMapPin className="mr-2 h-4 w-4"/> {portfolioData.contact.location}
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+      <footer className="mt-8 py-4 text-center text-xs text-game-text-dark font-pixel">
+        <p>&copy; {new Date().getFullYear()} {portfolioData.name}. Todos os direitos reservados.</p>
+        <p className="mt-1">Construído com Next.js, Tailwind CSS e uma pitada de magia pixelada.</p>
       </footer>
     </div>
   );
