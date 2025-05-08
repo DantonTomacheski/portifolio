@@ -7,12 +7,12 @@ export default function SobrePage() {
 
   return (
     <section className="animate-fadeIn">
-      <h2 className="section-title-game flex items-center">
+      <h2 className="section-title-game flex items-center mb-3">
         <FiUser className="mr-3 h-7 w-7" />
         Sobre Mim (Status do Personagem)
       </h2>
 
-      <div className="pixel-box bg-game-bg mb-6">
+      <div className="pixel-box bg-game-bg mb-6 p-6">
         <div className="flex flex-col sm:flex-row items-center mb-6">
           {/* Avatar Placeholder */}
           <div className="w-24 h-24 bg-game-secondary rounded-full pixel-border flex items-center justify-center text-4xl font-pixel text-game-bg mr-0 sm:mr-6 mb-4 sm:mb-0">
@@ -27,7 +27,7 @@ export default function SobrePage() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="pixel-box bg-game-bg">
+        <div className="pixel-box bg-game-bg p-6">
           <h4 className="font-pixel text-xl text-game-primary mb-3 flex items-center">
             <FiCode className="mr-2 h-5 w-5" /> Minha Missão
           </h4>
@@ -37,7 +37,7 @@ export default function SobrePage() {
           </p>
         </div>
 
-        <div className="pixel-box bg-game-bg">
+        <div className="pixel-box bg-game-bg  p-6">
           <h4 className="font-pixel text-xl text-game-primary mb-3 flex items-center">
             <FiHeart className="mr-2 h-5 w-5" /> Interesses
           </h4>
@@ -51,7 +51,7 @@ export default function SobrePage() {
         </div>
       </div>
 
-      <div className="pixel-box bg-game-bg mt-6">
+      <div className="pixel-box bg-game-bg mt-6  p-6">
           <h4 className="font-pixel text-xl text-game-primary mb-4 flex items-center">
             <FiMessageSquare className="mr-2 h-5 w-5" /> Informações de Contato
           </h4>
@@ -65,7 +65,7 @@ export default function SobrePage() {
       </div>
 
 
-      <div className="pixel-box bg-game-bg mt-6">
+      <div className="pixel-box bg-game-bg mt-6 p-6">
         <h4 className="font-pixel text-xl text-game-primary mb-3 flex items-center">
           <FiSmile className="mr-2 h-5 w-5" /> Idiomas (Pergaminhos Decifrados)
         </h4>

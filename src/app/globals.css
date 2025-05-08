@@ -4,6 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* Set custom cursor */
+body {
+  cursor: url('../images/ponteiro.png'), auto;
+}
+
+/* Apply custom cursor to links and buttons */
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  cursor: url('../images/ponteiro.png'), auto !important;
+}
+
 /* 2. Importar Tailwind CSS */
 @import "tailwindcss";
 

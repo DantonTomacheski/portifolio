@@ -1,19 +1,21 @@
 // app/(portfolio_sections)/layout.tsx
 import Link from 'next/link';
-import { FiHome, FiUser, FiBriefcase, FiAward, FiStar, FiMessageSquare, FiChevronsLeft } from 'react-icons/fi'; // Ícones
+import { FiHome, FiUser, FiBriefcase, FiAward, FiStar, FiMessageSquare, FiChevronsLeft, FiCode, FiBookOpen, FiMail } from 'react-icons/fi'; // Ícones
+import React from 'react'; // ADDED: For React.cloneElement
 
 // Componente de Navegação Lateral (ou Superior) para as seções
 const PortfolioNav = () => {
   const navItems = [
     { href: "/sobre", label: "Sobre", icon: <FiUser /> },
     { href: "/experiencias", label: "Experiências", icon: <FiBriefcase /> },
-    { href: "/projetos", label: "Projetos", icon: <FiAward /> },
+    { href: "/projetos", label: "Projetos", icon: <FiCode /> },
     { href: "/habilidades", label: "Habilidades", icon: <FiStar /> },
-    { href: "/contato", label: "Contato", icon: <FiMessageSquare /> },
+    { href: "/educacao", label: "Educação", icon: <FiBookOpen /> },
+    { href: "/contato", label: "Contato", icon: <FiMail /> },
   ];
 
   return (
-    <aside className="w-full md:w-64 bg-game-bg-light p-4 md:p-6 pixel-border shadow-pixel-md mb-6 md:mb-0 md:mr-6">
+    <aside className="hidden md:block md:w-64 bg-game-bg-light p-4 md:p-6 pixel-border shadow-pixel-md md:mr-6">
       <nav className="space-y-3">
         <Link href="/" passHref>
            <button className="pixel-button-secondary w-full flex items-center justify-center md:justify-start mb-4">
@@ -32,6 +34,29 @@ const PortfolioNav = () => {
     </aside>
   );
 };
+
+// ADDED: Navigation items for the mobile bottom bar
+const mobileNavItems = [
+  { href: "/", label: "Início", icon: <FiHome /> },
+  { href: "/sobre", label: "Sobre", icon: <FiUser /> },
+  { href: "/experiencias", label: "Log", icon: <FiBriefcase /> }, 
+  { href: "/projetos", label: "Projetos", icon: <FiAward /> },
+  { href: "/habilidades", label: "Skills", icon: <FiStar /> },
+];
+
+// ADDED: Componente de Navegação Inferior para Mobile
+const MobileBottomNav = ({ items }: { items: Array<{ href: string; label: string; icon: React.ReactElement }> }) => (
+  <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-game-bg pixel-border-top shadow-pixel-top-lg p-2 flex justify-around items-center z-50">
+    {items.map((item) => (
+      <Link key={item.label} href={item.href} passHref>
+        <button className="flex flex-col items-center text-game-text-light hover:text-game-accent focus:text-game-accent p-1 transition-colors">
+          {item.icon && React.cloneElement(item.icon, { className: "h-5 w-5 mb-0.5" })}
+          <span className="font-pixel text-xs tracking-tighter">{item.label}</span>
+        </button>
+      </Link>
+    ))}
+  </nav>
+);
 
 // Layout para as seções do portfólio
 export default function PortfolioSectionsLayout({
@@ -69,6 +94,7 @@ export default function PortfolioSectionsLayout({
       <footer className="mt-12 text-center text-xs text-game-text-dark font-pixel">
         <p>&copy; {new Date().getFullYear()} Danton Tomacheski. "Continue explorando!"</p>
       </footer>
+      <MobileBottomNav items={mobileNavItems} />
     </div>
   );
 }

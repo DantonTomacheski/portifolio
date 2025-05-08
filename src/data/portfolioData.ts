@@ -193,7 +193,7 @@ export interface PortfolioData {
     ],
     skills: [
       { name: "React.js", category: "Frontend", icon: "⚛️" },
-      { name: "Next.js", category: "Frontend", icon: "nextjs" }, // Você pode usar SVGs ou emojis
+      { name: "Next.js", category: "Frontend", icon: "⚫" },
       { name: "TypeScript", category: "Frontend", icon: "TS" },
       { name: "JavaScript", category: "Frontend", icon: "JS" },
       { name: "HTML5", category: "Frontend", icon: "🌐" },
@@ -215,7 +215,7 @@ export interface PortfolioData {
       { name: "Git", category: "Outras", icon: "🌿" },
       { name: "Jest", category: "Testing", icon: "🧪" },
       { name: "React Testing Library", category: "Testing", icon: "🎭" },
-      { name: "Playwright", category: "Testing", icon: " playwright" }, // Placeholder
+      { name: "Playwright", category: "Testing", icon: "▶️" },
       { name: "MongoDB", category: "Backend", icon: "🍃"}, // MongoDB é NoSQL, ícone de folha pode ser genérico
       { name: "SQL", category: "Backend", icon: "🗃️"}, // Genérico para SQL
     ],

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image'; // Importar o componente Image do Next.js
 import { portfolioData } from '../data/portfolioData';
 import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiAward, FiBriefcase, FiStar, FiUser } from 'react-icons/fi'; // Ícones para contato e botões
+import { FaWhatsapp } from 'react-icons/fa'; // Importar FaWhatsapp
 import avatarDanton from '../images/solo-avatar.png';
 
 // Componente para o "NPC" Danton
@@ -19,13 +20,7 @@ const DantonNPC = () => (
         priority // Opcional: Carrega a imagem com prioridade se for LCP (Largest Contentful Paint)
       />
     </div>
-    <h1 className="font-pixel text-3xl md:text-4xl text-game-accent mb-2">
-      {portfolioData.name}
-    </h1>
-    <p className="font-pixel text-lg md:text-xl text-game-text-dark">
-      {portfolioData.title}
-    </p>
-    <p className="text-sm text-game-text-dark mt-3 max-w-md mx-auto px-2">
+    <p className="text-sm text-game-text-dark mt-3 max-w-md mx-auto px-2 leading-relaxed">
       "Olá, aventureiro! Bem-vindo à minha jornada. Escolha sua quest para começar e explorar meu universo de código!"
     </p>
   </div>
@@ -52,13 +47,13 @@ const QuestButton = ({ href, children, icon }: QuestButtonProps) => (
 export default function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 md:p-8 bg-game-bg-light pattern-dots pattern-game-bg pattern-bg-fixed pattern-opacity-20">
-      <div className="pixel-box w-full max-w-3xl text-center shadow-pixel-lg animate-fadeIn bg-game-bg" style={{ animationDelay: '0.1s' }}>
+      <div className="pixel-box w-full max-w-3xl text-center shadow-pixel-lg animate-fadeIn bg-game-bg p-6" style={{ animationDelay: '0.1s' }}>
         <header className="my-6 md:my-8">
-          <p className="font-pixel text-xl md:text-2xl text-game-accent mb-2">
-            Toda jornada dev começa com uma escolha...
+          <p className="font-pixel text-3xl md:text-4xl text-game-accent mb-2 tracking-wider">
+            DANTON TOMACHESKI
           </p>
-          <p className="text-sm text-game-text-dark px-2">
-            Explore meu mundo de código, criatividade e missões concluídas!
+          <p className="text-md md:text-lg text-game-text-dark px-2 leading-relaxed font-pixel">
+            Desenvolvedor Full-Stack Pleno
           </p>
         </header>
 
@@ -85,13 +80,16 @@ export default function HomePage() {
             <a href={`mailto:${portfolioData.contact.email}`} aria-label="Email para Danton Tomacheski" className="text-game-text hover:text-game-accent transition-colors transform hover:scale-110">
               <FiMail size={30} />
             </a>
+            <a href="https://wa.me/5542999689501" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Danton Tomacheski" className="text-game-text hover:text-game-accent transition-colors transform hover:scale-110">
+              <FaWhatsapp size={30} />
+            </a>
           </div>
            <p className="text-sm text-game-text-dark mt-4 flex items-center justify-center">
             <FiMapPin className="mr-2 h-4 w-4"/> {portfolioData.contact.location}
           </p>
         </div>
       </div>
-      <footer className="mt-8 py-4 text-center text-xs text-game-text-dark font-pixel">
+      <footer className="mt-8 py-4 text-center text-sm text-game-text-dark font-pixel">
         <p>&copy; {new Date().getFullYear()} {portfolioData.name}. Todos os direitos reservados.</p>
         <p className="mt-1">Construído com Next.js, Tailwind CSS e uma pitada de magia pixelada.</p>
       </footer>

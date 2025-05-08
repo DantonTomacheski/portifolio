@@ -4,7 +4,7 @@ import { FiBriefcase, FiCalendar, FiMapPin, FiTerminal, FiUsers, FiTool } from '
 
 // Componente para um item de Experiência
 const ExperienceCard = ({ exp }: { exp: Experience }) => (
-  <div className="pixel-box bg-game-bg mb-6 transform transition-all duration-300 hover:shadow-pixel-lg hover:-translate-y-1">
+  <div className="pixel-box bg-game-bg mb-6 p-6 transform transition-all duration-300 hover:shadow-pixel-lg hover:-translate-y-1">
     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
       <h3 className="font-pixel text-xl text-game-accent">{exp.role}</h3>
       <span className="font-pixel text-sm text-game-text-dark mt-1 sm:mt-0 bg-game-bg-light px-2 py-1 border border-game-border shadow-pixel-sm">{exp.period}</span>
@@ -12,7 +12,7 @@ const ExperienceCard = ({ exp }: { exp: Experience }) => (
     <p className="font-pixel text-md text-game-primary mb-1 flex items-center">
       <FiUsers className="mr-2 h-4 w-4" /> {exp.company}
     </p>
-    <p className="text-xs text-game-text-dark mb-3 flex items-center">
+    <p className="text-md text-game-text-dark mb-3 flex items-center">
       <FiMapPin className="mr-2 h-4 w-4" /> {exp.location}
     </p>
     <p className="text-game-text-dark leading-relaxed mb-3 whitespace-pre-line">{exp.description}</p>
@@ -49,7 +49,7 @@ export default function ExperienciasPage() {
 
   return (
     <section className="animate-fadeIn">
-      <h2 className="section-title-game flex items-center">
+      <h2 className="section-title-game flex items-center mb-3">
         <FiBriefcase className="mr-3 h-7 w-7" />
         Experiências (Log de Aventuras)
       </h2>

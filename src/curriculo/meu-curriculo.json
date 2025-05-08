@@ -1,0 +1,244 @@
+{
+  "contactInfo": {
+    "name": "DANTON TOMACHESKI",
+    "title": "Desenvolvedor Full-Stack Pleno",
+    "phone": "+55 (42) 9.99968-9501",
+    "email": "danton_tomacheski@outlook.com",
+    "links": [
+      "Linkedin",
+      "Github"
+    ],
+    "location": "Ponta Grossa"
+  },
+  "summary": "Desenvolvedor Full-Stack com foco em front-end, apaixonado por performance, UX e código limpo. Especialista em React, Next.js, TypeScript e Node.js. No Paraná Banco, atuo como full-stack desenvolvendo funcionalidades criticas com Node.js no backend e React no frontend, com integrações complexas de APIs e foco em performance e segurança. Na Madalozzo Seguros, liderei a migração de stack para React e atuei também no backend com Node.js, integrando múltiplas seguradoras via APIs.",
+  "keyAchievements": [
+    {
+      "title": "Desenvolvimento Full-Stack",
+      "description": "Capacidade de atuar tanto no frontend (React, Next.js, Vue.js, TypeScript, HTML/CSS/JS) quanto no backend (Node.js, Java, Spring Boot, PHP, Microsserviços, APIs REST)."
+    },
+    {
+      "title": "Modernização e Migração",
+      "description": "Liderei e executei migrações de tecnologia (Vue.js para React.js) e modernizou bases de código legadas (componentes de classe para funcionais com Hooks)."
+    },
+    {
+      "title": "Desenvolvimento Mobile",
+      "description": "Criei aplicativos (React Native, Expo) focados em simplificar processos de negócios (abertura de sinistros)."
+    },
+    {
+      "title": "Integrações Complexas",
+      "description": "Integrei sistemas com diversas tecnologias e finalidades, como APIs de Open Finance, Pix via WhatsApp, APIs REST para dados de usuários, consentimentos e IA (BIA)."
+    },
+    {
+      "title": "Qualidade e Testes",
+      "description": "Implementei testes unitários e de integração (Jest, RTL) e utilizou ferramentas de análise de qualidade (SonarQube)."
+    }
+  ],
+  "experience": [
+    {
+      "company": "Paraná Banco S/A",
+      "location": "Curitiba, Brazil",
+      "role": "Desenvolvedor especialista Front-end",
+      "period": "05/2022-Presente",
+      "companyDescription": "Fundado em 1979 como Financial Paraná e transformado em Paraná Banco S.A. em 1989, é parte do Grupo J.Malucelli. Banco múltiplo especializado em empréstimos consignados, sendo pioneiro no crédito para servidores públicos e um dos primeiros a fechar acordo com o INSS para fornecer crédito a aposentados e pensionistas. Com mais de 40 anos no mercado financeiro, atua também no segmento de seguros de garantia através da subsidiária Junto Seguros, oferecendo soluções financeiras personalizadas com foco no cliente e colaboradores.",
+      "responsibilities": [
+        "Desenvolvimento e manutenção de aplicações com React.js, Next.js, TypeScript e Node.js.",
+        "Implementação de interfaces responsivas com Styled Components, e Tailwind CSS utilizando bibliotecas de componentes internas para acelerar o desenvolvimento e garantir a consistência visual e funcional.",
+        "Modernização de projetos legados, incluindo a refatoração de componentes React (classes para funções) com Hooks (useState, useEffect, useContext).",
+        "Integração com APIs REST utilizando Axios para autenticação, consulta e manipulação de dados de usuários, consentimentos e oportunidades.",
+        "Criação e manutenção de testes unitários e de integração com Jest e React Testing Library para garantir a qualidade e estabilidade do código.",
+        "Gerenciamento de estado global da aplicação com React Context API, Redux e Zustand.",
+        "Configuração e manutenção de pipelines de Integração Contínua (CI/CD) no Azure DevOps, com análise de qualidade de código via SonarQube.",
+        "Implementação de formulários complexos com validação utilizando Formik e Yup.",
+        "Configuração de ambientes web (web.config) com foco em segurança, incluindo gerenciamento de cookies e redirecionamentos HTTPS.",
+        "Desenvolvimento de funcionalidades para validação de identidade (vivacidade, documentos, qualidade de imagem) e lógicas de negócio (simulação de empréstimos, contratos digitais).",
+        "Integração com Google Tag Manager (GTM) para coleta de dados e análise de uso das aplicações."
+      ]
+    },
+    {
+      "company": "Wipro",
+      "location": "Brazil",
+      "role": "Full-stack Developer",
+      "period": "09/2021-04/2022",
+      "companyDescription": "Empresa global de tecnologia da informação, consultoria e serviços de processos de negócios com presença no Brasil há mais de 16 anos. Iniciou sua jornada no país em 2006 após adquirir a Enabler, expandindo operações em 2017 com a aquisição da InfoSERVER e em 2020 com a IVIA. Atende mais de 60 clientes globais e locais através de cinco escritórios e centros de entrega no pais, com expertise em tecnologias como nuvem, analytics, aplicações e infraestrutura. Reconhecida como Top Employer no Brasil, a Wipro integra transformação digital com responsabilidade social e ambiental.",
+      "responsibilities": [
+        "Desenvolvimento e integração de Microsserviços backend para a Inteligência Artificial BIA do Bradesco, utilizando Java e Spring Boot para suportar operações em larga escala e garantir alta disponibilidade da plataforma de IA.",
+        "Implementação da funcionalidade de transações Pix via WhatsApp, integrando com a API do WhatsApp e sistemas Pix através de APIs REST seguras, para permitir pagamentos diretos e confiáveis pelo chatbot, simplificando a jornada do cliente.",
+        "Desenvolvimento e otimização de sistemas de Perguntas e Respostas (Q&A) com Java e Spring Boot, visando agilizar e qualificar o atendimento automatizado da BIA a clientes internos e externos.",
+        "Aplicação de design patterns para sistemas escaláveis e práticas de desenvolvimento seguro na construção de APIs REST com Java/Spring Boot, para assegurar alta performance, disponibilidade e segurança frente a um grande volume de interações e transações.",
+        "Foco na otimização de performance das APIs e microsserviços para garantir tempos de resposta rápidos e eficientes nas interações da BIA, melhorando a experiência do usuário final."
+      ],
+      "technologiesSkills": [
+        "Java",
+        "Spring Boot",
+        "Microsserviços",
+        "APIs REST seguras",
+        "Integração com API do WhatsApp",
+        "Pix",
+        "Design de sistemas escaláveis",
+        "Segurança de aplicações",
+        "Otimização de performance"
+      ]
+    },
+    {
+      "company": "Madalozzo Seguros",
+      "location": "Ponta Grossa, Brazil",
+      "role": "Mobile Developer",
+      "period": "12/2020-09/2021",
+      "companyDescription": "Corretora de seguros com 91 anos de tradição (desde 1932), que alia experiência, inovação e tecnología no mercado securitário brasileiro. Com mais de R$1 milhão em vendas diárias e presença em 30 filiais distribuidas por 7 estados do Brasil, a empresa se destaca pelo crescimento constante acima de 35% ao ano, dobrando de tamanho a cada três anos. Através da subsidiária Madatech, investe fortemente em tecnologia desde 2020, mantendo parcerias com as principais seguradoras do mercado e oferecendo atendimento humanizado com soluções multicanal em diversos produtos de seguros.",
+      "responsibilities": [
+        "Liderança técnica da equipe no desenvolvimento e lançamento do portal madaseg.com.br, utilizando Jira para gerenciamento de tarefas e Bitbucket para controle de versão, visando integrar múltiplas seguradoras via APIs (Open Finance).",
+        "Migração de Vue.js para React.js com uso de Node.js para integração com APIs de seguradoras (Open Finance).",
+        "Desenvolvimento de aplicativo móvel multiplataforma utilizando React Native e Expo, incluindo configuração de ambiente com Docker, para simplificar e agilizar o processo de abertura de sinistros pelos clientes, permitindo envio de localização e dados em tempo real.",
+        "Criação de dashboards e aplicativos exclusivos em React.js para corretores, consumindo APIs para fornecer estatísticas e dados atualizados dinamicamente, aumentando a eficiência na gestão de seguros.",
+        "Implementação de soluções mobile-first, garantindo design responsivo e performance otimizada em dispositivos móveis tanto para o portal quanto para os aplicativos internos e externos.",
+        "Gerenciamento do ciclo de vida do desenvolvimento, desde o planejamento no Jira até a implantação, utilizando Bitbucket Pipelines para CI/CD (se aplicável, ou mencionar o processo de deploy)."
+      ],
+      "technologiesSkills": [
+        "Liderança Técnica",
+        "React.js",
+        "React Native",
+        "Expo",
+        "Vue.js (migração)",
+        "Docker",
+        "Integração via APIs (Open Finance)",
+        "Jira",
+        "Bitbucket",
+        "Mobile-first",
+        "Soluções para Seguros"
+      ]
+    },
+    {
+      "company": "Agencia Alper",
+      "location": "Curitiba, Brazil",
+      "role": "Programador FullStack",
+      "period": "05/2020-12/2020",
+      "companyDescription": "Agência de marketing digital sediada em Curitiba que atua na região sul do Brasil, especializada em oferecer soluções criativas e tecnologia de ponta para impulsionar a presença digital de empresas. Fundada com o propósito de fornecer serviços personalizados focados na internet, oferece criação de sites otimizados, gestão de redes sociais, campanhas de anúncios online e integração com marketplaces. Localizada na Rua Emilio de Menezes, 834, no bairro São Francisco, a agência busca constantemente superar as expectativas dos clientes, criando soluções que os levem na direção de seus objetivos de negócio.",
+      "responsibilities": [
+        "Desenvolvimento completo de websites utilizando WordPress e PHP, com foco em alta performance, design responsivo e otimização SEO avançada, para criar e melhorar a presença digital dos clientes.",
+        "Implementação de estratégias de SEO avançado, configurando plugins como Yoast SEO dentro do WordPress, para otimizar o posicionamento orgânico nos motores de busca e aumentar a visibilidade e o tráfego dos sites.",
+        "Gerenciamento técnico de servidores e infraestrutura web, utilizando Shell Script para automação de tarefas de manutenção e monitoramento, visando garantir a estabilidade e segurança dos websites hospedados.",
+        "Configuração e manutenção avançada de DNS em plataformas como registro.br e Cloudflare, para otimizar a resolução de nomes, configurar regras de segurança e melhorar a performance de entrega de conteúdo (CDN via Cloudflare)."
+      ],
+      "technologiesSkills": [
+        "WordPress",
+        "PHP",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SEO Avançado",
+        "Yoast SEO",
+        "Shell Script",
+        "Gerenciamento de Servidores (Linux)",
+        "DNS (registro.br, Cloudflare)",
+        "Design Responsivo"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Vue.js: Building an Interface",
+      "issuingOrganization": "LinkedIn",
+      "date": "Not specified"
+    },
+    {
+      "name": "Generative AI for Software Development",
+      "issuingOrganization": "Deeplearning.ai",
+      "date": "2025 (Remoto)"
+    }
+  ],
+  "personalProjects": [
+    {
+      "name": "Complex To-Do List App",
+      "description": "Desenvolvi uma aplicação para exemplificar tudo que já trabalhei / uso no frontend e facilitar o processo de seleção dos senhores. Uma aplicação web/mobile-first que facilita o gerenciamento de tarefas diárias e projetos pessoais, utilizando React.js, Zustand e Tailwind CSS. O sistema oferece um design responsivo, organização intuitiva por projetos, visualização em calendário, suporte multilingue, além de testes automatizados com Jest e Playwright, com deploy otimizado no Netlify como Progressive Web App (PWA).",
+      "link": "link do app",
+      "keyFeatures": [
+        "Desenvolvi uma aplicação web/mobile-first para gerenciamento completo de tarefas diárias e projetos pessoais.",
+        "Implementei uma arquitetura frontend moderna usando React 18, com gerenciamento de estado via Zustand e persistência em local storage.",
+        "Construi um design responsivo seguindo a metodologia Atomic Design, utilizando Tailwind CSS e Styled Components.",
+        "Realizei testes automatizados com Jest (testes unitários) e Playwright (testes end-to-end), garantindo qualidade e estabilidade.",
+        "Integrei suporte a múltiplos idiomas através da biblioteca i18next, disponibilizando versões em português e inglês.",
+        "Automatizei o processo de deploy e hospedei o projeto no Netlify, com otimização para PWA permitindo funcionalidade offline."
+      ],
+      "technologies": [
+        "React.js",
+        "Zustand",
+        "Tailwind CSS",
+        "Styled Components",
+        "Jest",
+        "Playwright",
+        "i18next",
+        "Netlify",
+        "PWA"
+      ]
+    },
+    {
+      "name": "Github scrap documentation",
+      "period": "05/2025-Presente",
+      "description": "Estou desenvolvendo uma API em Go que resolve um problema real: garantir que o contexto fornecido às LLMs seja sempre atual e preciso. Como parte do meu aprendizado em Go, resolvi me desafiar a construir uma API de alta performance para extração recursiva de documentação. Estou experimentando com Go justamente pela sua capacidade de lidar com tarefas concorrentes e pela eficiência no gerenciamento de recursos.",
+      "implementationDetails": [
+        "Gin Framework para rotas RESTful e middlewares",
+        "Worker pools para processamento paralelo e concorrência eficiente",
+        "MongoDB com driver oficial para persistência dos dados",
+        "Context para gerenciamento de timeouts e cancelamento",
+        "Godotenv para configuração via variáveis de ambiente",
+        "GitHub API Client para acesso aos repositórios e conteúdo"
+      ],
+      "technologies": [
+        "Go",
+        "Gin Framework",
+        "Worker pools",
+        "MongoDB",
+        "Context API (Go)",
+        "Godotenv",
+        "GitHub API Client"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "PORTUGUÊS",
+      "proficiency": "Nativo"
+    },
+    {
+      "language": "INGLÊS",
+      "proficiency": "Avançado"
+    },
+    {
+      "language": "ESPANHOL",
+      "proficiency": "Proficiente"
+    },
+    {
+      "language": "ALEMÃO",
+      "proficiency": "Iniciante"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidade Positivo",
+      "degree": "Bacharelado em Engenharia, Engenharia de Software",
+      "period": "01/2024-Presente"
+    }
+  ],
+  "keyCompetencies": [
+    {
+      "area": "React.js, Next.js, TypeScript, Node.js",
+      "description": "Desenvolvimento completo de aplicações modernas, escaláveis e seguras, com foco em front-end e back-end."
+    },
+    {
+      "area": "Integrações REST, Open Finance, API WhatsApp",
+      "description": "Comunicação entre sistemas diversos com segurança e foco em soluções bancárias e financeiras."
+    },
+    {
+      "area": "DevOps (Docker, Azure CI/CD, Bitbucket Pipelines)",
+      "description": "Automatização de deploys, integração contínua e análise de qualidade de código com foco em eficiência e confiabilidade."
+    },
+    {
+      "area": "Testes (Playwright, E2E, Jest, React Testing Library)",
+      "description": "Garantia de qualidade com testes automatizados de unidade e integração, assegurando estabilidade continua."
+    },
+    {
+      "area": "Mobile (React Native, Expo)",
+      "description": "Criação de aplicativos móveis multiplataforma com foco em performance, usabilidade e rápida entrega."
+    }
+  ]
+}
