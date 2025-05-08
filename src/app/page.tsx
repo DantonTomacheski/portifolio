@@ -91,7 +91,7 @@ export default function HomePage() {
       </div>
       <footer className="mt-8 py-4 text-center text-sm text-game-text-dark font-pixel">
         <p>&copy; {new Date().getFullYear()} {portfolioData.name}. Todos os direitos reservados.</p>
-        <p className="mt-1">Construído com Next.js, Tailwind CSS e uma pitada de magia pixelada.</p>
+        <p className="mt-1">Construído com Next.js, Tailwind CSS.</p>
       </footer>
     </div>
   );

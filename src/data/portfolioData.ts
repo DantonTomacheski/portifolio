@@ -4,13 +4,7 @@
 export interface PortfolioData {
     name: string;
     title: string;
-    contact: {
-      phone: string;
-      email: string;
-      linkedin: string; // Adicione o link completo do seu LinkedIn
-      github: string;   // Adicione o link completo do seu GitHub
-      location: string;
-    };
+    contact: PortfolioContact;
     summary: string;
     experience: Experience[];
     projects: Project[];
@@ -20,6 +14,15 @@ export interface PortfolioData {
     skills: Skill[];
   }
   
+  export interface PortfolioContact {
+    phone: string;
+    email: string;
+    linkedin: string; // Adicione o link completo do seu LinkedIn
+    whatsappLink: string; // Adicione o link do seu WhatsApp
+    github: string;   // Adicione o link completo do seu GitHub
+    location: string;
+  }
+
   export interface Experience {
     role: string;
     company: string;
@@ -68,12 +71,13 @@ export interface PortfolioData {
     contact: {
       phone: "+55 (42) 9.99968-9501",
       email: "danton_tomacheski@outlook.com",
-      linkedin: "https://www.linkedin.com/in/dantontomacheski/", // Exemplo, substitua pelo seu link
-      github: "https://github.com/dantontomacheski",     // Exemplo, substitua pelo seu link
+      linkedin: "https://www.linkedin.com/in/danton-tomacheski/",
+      whatsappLink: "https://wa.me/5542999689501",
+      github: "https://github.com/dantontomacheski",
       location: "Ponta Grossa, Paraná",
     },
     summary:
-      "Desenvolvedor Full-Stack com foco em front-end, apaixonado por performance, UX e código limpo. Especialista em React, Next.js, TypeScript e Node.js. No Paraná Banco, atuo como full-stack desenvolvendo funcionalidades críticas com Node.js no backend e React no frontend, com integrações complexas de APIs e foco em performance e segurança. Na Madalozzo Seguros, liderei a migração de stack para React e atuei também no backend com Node.js, integrando múltiplas seguradoras via APIs.",
+      "Desenvolvedor Full-Stack com foco em front-end, apaixonado por performance, UX e código limpo. Especialista em React, Next.js, TypeScript e Node.js. Atuo como full-stack desenvolvendo funcionalidades críticas com Node.js no backend e React no frontend, com integrações complexas de APIs e foco em performance e segurança. Liderei a migração de stack para React e atuei também no backend com Node.js, integrando múltiplas seguradoras via APIs.",
     experience: [
       {
         role: "Desenvolvedor especialista Front-end",
@@ -162,8 +166,8 @@ export interface PortfolioData {
           "React.js", "Zustand", "Tailwind CSS", "Styled Components", "Jest",
           "Playwright", "i18next", "Netlify", "PWA",
         ],
-        link: "#", // Substitua pelo link real, se houver
-        repo: "#", // Substitua pelo link real, se houver
+        link: "https://github.com/DantonTomacheski/to-do-list",
+        repo: "https://github.com/DantonTomacheski/to-do-list",
       },
       {
         name: "Github scrap documentation",
@@ -171,7 +175,7 @@ export interface PortfolioData {
         description:
           "API em Go para extração recursiva de documentação de repositórios GitHub. O objetivo é garantir que o contexto fornecido às LLMs seja sempre atual e preciso. Utiliza Gin Framework, Worker pools, MongoDB, e GitHub API Client.",
         technologies: ["Go", "Gin Framework", "Worker pools", "MongoDB", "GitHub API"],
-        repo: "#", // Substitua pelo link real, se houver
+        repo: "https://github.com/DantonTomacheski/go-mcpdocs",
       },
     ],
     education: [

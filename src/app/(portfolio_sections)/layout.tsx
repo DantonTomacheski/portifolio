@@ -10,8 +10,6 @@ const PortfolioNav = () => {
     { href: "/experiencias", label: "Experiências", icon: <FiBriefcase /> },
     { href: "/projetos", label: "Projetos", icon: <FiCode /> },
     { href: "/habilidades", label: "Habilidades", icon: <FiStar /> },
-    { href: "/educacao", label: "Educação", icon: <FiBookOpen /> },
-    { href: "/contato", label: "Contato", icon: <FiMail /> },
   ];
 
   return (
@@ -19,7 +17,7 @@ const PortfolioNav = () => {
       <nav className="space-y-3">
         <Link href="/" passHref>
            <button className="pixel-button-secondary w-full flex items-center justify-center md:justify-start mb-4">
-            <FiChevronsLeft className="mr-2 h-5 w-5" /> Voltar ao Início
+            <FiChevronsLeft className="mr-2 h-5 w-5" /> Lobby
           </button>
         </Link>
         {navItems.map((item) => (
@@ -69,7 +67,7 @@ export default function PortfolioSectionsLayout({
       <header className="mb-8 text-center">
         <Link href="/" passHref>
             <h1 className="font-pixel text-3xl md:text-5xl text-game-accent inline-block hover:text-game-primary transition-colors cursor-pointer">
-                Danton's Dev Quest
+                Danton's Dev History
             </h1>
         </Link>
       </header>
