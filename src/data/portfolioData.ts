@@ -62,6 +62,7 @@ export interface PortfolioData {
     name: string;
     category: 'Frontend' | 'Backend' | 'Mobile' | 'DevOps' | 'Testing' | 'Outras';
     icon?: string; // Opcional: nome de um ícone ou emoji
+    level: number; 
   }
   
   // Preencha com seus dados extraídos do currículo
@@ -196,32 +197,32 @@ export interface PortfolioData {
       { name: "Alemão", level: "Iniciante" },
     ],
     skills: [
-      { name: "React.js", category: "Frontend", icon: "⚛️" },
-      { name: "Next.js", category: "Frontend", icon: "⚫" },
-      { name: "TypeScript", category: "Frontend", icon: "TS" },
-      { name: "JavaScript", category: "Frontend", icon: "JS" },
-      { name: "HTML5", category: "Frontend", icon: "🌐" },
-      { name: "CSS3", category: "Frontend", icon: "🎨" },
-      { name: "Tailwind CSS", category: "Frontend", icon: "💨" },
-      { name: "Styled Components", category: "Frontend", icon: "💅" },
-      { name: "Node.js", category: "Backend", icon: "🔩" },
-      { name: "Java", category: "Backend", icon: "☕" },
-      { name: "Spring Boot", category: "Backend", icon: "🍃" },
-      { name: "PHP", category: "Backend", icon: "🐘" },
-      { name: "Go", category: "Backend", icon: "🐹" },
-      { name: "REST APIs", category: "Backend", icon: "🔗" },
-      { name: "Microsserviços", category: "Backend", icon: "🧩" },
-      { name: "React Native", category: "Mobile", icon: "📱" },
-      { name: "Expo", category: "Mobile", icon: "🛠️" },
-      { name: "Docker", category: "DevOps", icon: "🐳" },
-      { name: "Azure CI/CD", category: "DevOps", icon: "☁️" },
-      { name: "Bitbucket Pipelines", category: "DevOps", icon: "🚀" },
-      { name: "Git", category: "Outras", icon: "🌿" },
-      { name: "Jest", category: "Testing", icon: "🧪" },
-      { name: "React Testing Library", category: "Testing", icon: "🎭" },
-      { name: "Playwright", category: "Testing", icon: "▶️" },
-      { name: "MongoDB", category: "Backend", icon: "🍃"}, // MongoDB é NoSQL, ícone de folha pode ser genérico
-      { name: "SQL", category: "Backend", icon: "🗃️"}, // Genérico para SQL
+      { name: "React.js", category: "Frontend", icon: "⚛️", level: 5 },
+      { name: "Next.js", category: "Frontend", icon: "⚫", level: 5 },
+      { name: "TypeScript", category: "Frontend", icon: "TS", level: 5 },
+      { name: "JavaScript", category: "Frontend", icon: "JS", level: 5 },
+      { name: "HTML5", category: "Frontend", icon: "🌐", level: 5 },
+      { name: "CSS3", category: "Frontend", icon: "🎨", level: 5 },
+      { name: "Tailwind CSS", category: "Frontend", icon: "💨", level: 4 },
+      { name: "Styled Components", category: "Frontend", icon: "💅", level: 4 },
+      { name: "Node.js", category: "Backend", icon: "🔩", level: 4 },
+      { name: "Java", category: "Backend", icon: "☕", level: 3 },
+      { name: "Spring Boot", category: "Backend", icon: "🍃", level: 3 },
+      { name: "PHP", category: "Backend", icon: "🐘", level: 2 },
+      { name: "Go", category: "Backend", icon: "🐹", level: 3 },
+      { name: "REST APIs", category: "Backend", icon: "🔗", level: 5 },
+      { name: "Microsserviços", category: "Backend", icon: "🧩", level: 4 },
+      { name: "React Native", category: "Mobile", icon: "📱", level: 3 },
+      { name: "Expo", category: "Mobile", icon: "🛠️", level: 3 },
+      { name: "Docker", category: "DevOps", icon: "🐳", level: 3 },
+      { name: "Azure CI/CD", category: "DevOps", icon: "☁️", level: 4 },
+      { name: "Bitbucket Pipelines", category: "DevOps", icon: "🚀", level: 3 },
+      { name: "Git", category: "Outras", icon: "🌿", level: 5 },
+      { name: "Jest", category: "Testing", icon: "🧪", level: 4 },
+      { name: "React Testing Library", category: "Testing", icon: "🎭", level: 4 },
+      { name: "Playwright", category: "Testing", icon: "▶️", level: 2 },
+      { name: "MongoDB", category: "Backend", icon: "🍃", level: 3}, 
+      { name: "SQL", category: "Backend", icon: "🗃️", level: 3}, 
     ],
   };
   

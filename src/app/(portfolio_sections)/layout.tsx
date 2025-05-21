@@ -1,7 +1,14 @@
 // app/(portfolio_sections)/layout.tsx
+"use client"; // Required for using client-side hooks like usePathname and useEffect
 import Link from 'next/link';
 import { FiHome, FiUser, FiBriefcase, FiAward, FiStar, FiMessageSquare, FiChevronsLeft, FiCode, FiBookOpen, FiMail } from 'react-icons/fi'; // Ícones
-import React from 'react'; // ADDED: For React.cloneElement
+import React, { useEffect } from 'react'; // ADDED: For React.cloneElement and useEffect
+import { usePathname } from 'next/navigation'; // Import usePathname
+import ProgressDisplay from '../../../components/ProgressDisplay'; // Import ProgressDisplay
+
+// Define trackable sections and localStorage key (should match ProgressDisplay.tsx)
+const trackableSections = ['/sobre', '/experiencias', '/projetos', '/habilidades'];
+const localStorageKey = 'visitedPortfolioSections';
 
 // Componente de Navegação Lateral (ou Superior) para as seções
 const PortfolioNav = () => {
@@ -62,6 +69,33 @@ export default function PortfolioSectionsLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Ensure this code only runs on the client-side
+    if (typeof window !== 'undefined' && trackableSections.includes(pathname)) {
+      const visitedFromStorage = localStorage.getItem(localStorageKey);
+      let visitedPaths = visitedFromStorage ? JSON.parse(visitedFromStorage) : [];
+      
+      // Ensure we are working with an array
+      if (!Array.isArray(visitedPaths)) {
+        visitedPaths = [];
+      }
+
+      if (!visitedPaths.includes(pathname)) {
+        visitedPaths.push(pathname);
+        const updatedVisitedPaths = JSON.stringify(visitedPaths);
+        localStorage.setItem(localStorageKey, updatedVisitedPaths);
+        // Dispatch custom event so ProgressDisplay updates
+        window.dispatchEvent(new StorageEvent('storage', { 
+          key: localStorageKey, 
+          newValue: updatedVisitedPaths,
+          oldValue: visitedFromStorage // Provide the old value
+        }));
+      }
+    }
+  }, [pathname]);
+
   return (
     <div className="min-h-screen bg-game-bg flex flex-col p-4 md:p-8 pattern-crosses pattern-game-bg-light pattern-bg-fixed pattern-opacity-10">
       <header className="mb-8 text-center">
@@ -71,7 +105,7 @@ export default function PortfolioSectionsLayout({
             </h1>
         </Link>
       </header>
-
+      <ProgressDisplay /> {/* Add ProgressDisplay component here */}
       <div className="flex flex-col md:flex-row flex-grow container mx-auto max-w-6xl">
         <PortfolioNav />
         <main className="flex-grow bg-game-bg-light p-6 md:p-8 pixel-border shadow-pixel-lg overflow-y-auto">

@@ -13,12 +13,21 @@ const categoryDetails = {
 };
 
 // Componente para um card de habilidade individual
-const SkillCard = ({ skill }: { skill: Skill }) => (
-  <div className="font-pixel bg-game-secondary text-game-bg-light border border-game-border shadow-pixel-sm hover:shadow-pixel-md transform transition-all duration-200 hover:bg-game-primary flex items-center text-xs px-2 py-1 min-h-[3.5rem] w-[calc(50%-0.5rem)] sm:text-sm sm:px-3 sm:py-2 sm:min-h-[4rem] sm:w-auto">
-    {skill.icon && <span className="mr-2 text-lg">{skill.icon}</span>} {/* Ícone da habilidade */}
-    <span className="flex-1 min-w-0 break-words">{skill.name}</span> {/* Removed break-words */}
-  </div>
-);
+const SkillCard = ({ skill }: { skill: Skill }) => {
+  const stars = '★'.repeat(skill.level) + '☆'.repeat(5 - skill.level); // Create stars based on level
+
+  return (
+    <div className="font-pixel bg-game-secondary text-game-bg-light border border-game-border shadow-pixel-sm hover:shadow-pixel-md transform transition-all duration-200 hover:bg-game-primary flex flex-col text-xs px-2 py-2 min-h-[4.5rem] w-[calc(50%-0.5rem)] sm:text-sm sm:px-3 sm:py-3 sm:min-h-[5.5rem] sm:w-auto">
+      <div className="flex items-center mb-1">
+        {skill.icon && <span className="mr-2 text-lg">{skill.icon}</span>}
+        <span className="flex-1 min-w-0 break-words">{skill.name}</span>
+      </div>
+      <div className="text-game-accent text-base mt-1"> {/* Increased star size and added small top margin */}
+        {stars}
+      </div>
+    </div>
+  );
+};
 
 export default function HabilidadesPage() {
   const { skills } = portfolioData;
