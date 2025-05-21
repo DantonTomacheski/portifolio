@@ -12,12 +12,12 @@ const DantonNPC = () => (
     {/* Avatar pixelado do Danton usando next/image */}
     <div className="mx-auto mb-4 w-32 h-32 md:w-40 md:h-40 pixel-border rounded-full relative shadow-pixel-md bg-game-bg">
       <Image
-        src={avatarDanton} // Caminho para sua imagem na pasta public/images/
+        src={avatarDanton}
         alt={`Avatar de ${portfolioData.name}`}
-        layout="fill" // Faz a imagem preencher o contêiner div
-        objectFit="cover" // Garante que a imagem cubra o espaço sem distorcer, pode cortar um pouco
-        className="rounded-full" // Garante que a imagem em si também seja arredondada se não for quadrada
-        priority // Opcional: Carrega a imagem com prioridade se for LCP (Largest Contentful Paint)
+        fill
+        sizes="(max-width: 768px) 8rem, 10rem"
+        className="rounded-full object-cover"
+        priority
       />
     </div>
     <p className="text-sm text-game-text-dark mt-3 max-w-md mx-auto px-2 leading-relaxed">

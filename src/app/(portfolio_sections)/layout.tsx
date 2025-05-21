@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FiHome, FiUser, FiBriefcase, FiAward, FiStar, FiMessageSquare, FiChevronsLeft, FiCode, FiBookOpen, FiMail } from 'react-icons/fi'; // Ícones
 import React, { useEffect } from 'react'; // ADDED: For React.cloneElement and useEffect
 import { usePathname } from 'next/navigation'; // Import usePathname
-import ProgressDisplay from '../../../components/ProgressDisplay'; // Import ProgressDisplay
+import ProgressDisplay from '../../components/ProgressDisplay'; // Import ProgressDisplay
 
 // Define trackable sections and localStorage key (should match ProgressDisplay.tsx)
 const trackableSections = ['/sobre', '/experiencias', '/projetos', '/habilidades'];
