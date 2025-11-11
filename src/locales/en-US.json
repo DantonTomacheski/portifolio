@@ -1,0 +1,84 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "back": "Back"
+  },
+  "nav": {
+    "about": "About Me",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "skills": "Skills",
+    "home": "Home",
+    "lobby": "Lobby",
+    "log": "Log"
+  },
+  "home": {
+    "title": "DANTON TOMACHESKI",
+    "subtitle": "Full-Stack Developer",
+    "npcMessage": "Hello, adventurer! Welcome to my journey. Choose your quest to start and explore my code universe!",
+    "connectTitle": "Connect:",
+    "questButtons": {
+      "about": "About Me (Status)",
+      "experiences": "Experiences (Log)",
+      "projects": "Projects (Achievements)",
+      "skills": "Skills (Talents)"
+    }
+  },
+  "about": {
+    "title": "About Me (Character Status)",
+    "subtitle": "My Story",
+    "mission": "My Mission",
+    "missionText": "Full-Stack Developer with a focus on front-end, passionate about performance, UX, and clean code. Expert in React, Next.js, TypeScript, and Node.js. I work as a full-stack developer building critical features with Node.js on the backend and React on the frontend, with complex API integrations and a focus on performance and security. I have led Vue.js to React migrations and also worked on the backend with Node.js, integrating multiple insurance companies via APIs.",
+    "interests": "Interests",
+    "interestsList": {
+      "fullstack": "Full-Stack Development (React, Next.js, Node.js, Java, Go)",
+      "architecture": "Microservices Architecture and Scalable Systems",
+      "performance": "Performance, Optimization, and Application Security",
+      "mobile": "Mobile Development (React Native) and Modern Web Solutions (PWAs)",
+      "integration": "System and API Integration (Open Finance, Payments)",
+      "ai": "Artificial Intelligence and Natural Language Processing",
+      "quality": "Software Quality and Test Automation"
+    },
+    "contact": "Contact Information",
+    "languages": "Languages (Deciphered Scrolls)"
+  },
+  "experiences": {
+    "title": "Experiences (Adventure Log)",
+    "subtitle": "My Professional Journey",
+    "mainTasks": "Main Tasks:",
+    "technologies": "Technologies Used:"
+  },
+  "projects": {
+    "title": "Projects (Achievements & Artifacts)",
+    "subtitle": "My Achievements",
+    "noProjects": "No projects found.",
+    "checkConsole": "Check the console for more details if you're a developer.",
+    "recentRepos": "Recent GitHub Repositories",
+    "otherProjects": "Other Featured Projects",
+    "viewOnGithub": "View on GitHub",
+    "topics": "Topics:",
+    "technologies": "Technologies:",
+    "viewProject": "View Project",
+    "viewRepo": "View Repository",
+    "noDescription": "No description provided.",
+    "lastPush": "Last push:",
+    "forks": "Forks"
+  },
+  "skills": {
+    "title": "Skills Arsenal (Skill Tree)",
+    "subtitle": "My Talents",
+    "categories": {
+      "Frontend": "Frontend Dev (Interface Wizardry)",
+      "Backend": "Backend Dev (Server Sorcery)",
+      "Mobile": "Mobile Dev (Pocket Power)",
+      "DevOps": "DevOps & Infra (Cloud Command)",
+      "Testing": "QA & Testing (Bug Busters)",
+      "Outras": "Other Skills (Versatile Skills)"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} {name}. All rights reserved.",
+    "builtWith": "Built with Next.js, Tailwind CSS."
+  }
+}

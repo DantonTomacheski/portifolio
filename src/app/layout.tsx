@@ -1,11 +1,15 @@
 // app/layout.tsx
-import type { Metadata } from 'next'
-import './globals.css' // Importa os estilos globais
+import type { Metadata } from "next";
+import "./globals.css"; // Importa os estilos globais
+import { TranslationProvider } from "@/contexts/TranslationContext";
+import LanguageSelector from "@/components/LanguageSelector";
+import { HtmlLangUpdater } from "@/components/HtmlLangUpdater";
 
 // Metadata para SEO e título da aba do navegador
 export const metadata: Metadata = {
   title: "Danton Tomacheski - Dev Portfolio Quest",
-  description: "A jornada de Danton Tomacheski pelo mundo do desenvolvimento. Explore suas habilidades, projetos e experiências.",
+  description:
+    "A jornada de Danton Tomacheski pelo mundo do desenvolvimento. Explore suas habilidades, projetos e experiências.",
   // Você pode adicionar mais metadados aqui, como open graph images
 };
 
@@ -26,10 +30,17 @@ export default function RootLayout({
       <body>
         {/* Efeito CRT para dar um toque retrô à tela inteira */}
         <div className="crt-effect"></div>
-        {/* Conteúdo principal da aplicação */}
-        <main className="min-h-screen antialiased">
-          {children}
-        </main>
+        {/* Translation Provider wraps the entire app for i18n support */}
+        <TranslationProvider>
+          {/* Updates HTML lang attribute when locale changes */}
+          <HtmlLangUpdater />
+          {/* Language Selector - Fixed position in top-right corner */}
+          <div className="fixed top-4 right-4" style={{ zIndex: 2001 }}>
+            <LanguageSelector />
+          </div>
+          {/* Conteúdo principal da aplicação */}
+          <main className="min-h-screen antialiased">{children}</main>
+        </TranslationProvider>
       </body>
     </html>
   );

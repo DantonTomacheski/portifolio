@@ -1,0 +1,84 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "back": "Voltar"
+  },
+  "nav": {
+    "about": "Sobre Mim",
+    "experiences": "Experiências",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "home": "Início",
+    "lobby": "Lobby",
+    "log": "Log"
+  },
+  "home": {
+    "title": "DANTON TOMACHESKI",
+    "subtitle": "Desenvolvedor Full-Stack Pleno",
+    "npcMessage": "Olá, aventureiro! Bem-vindo à minha jornada. Escolha sua quest para começar e explorar meu universo de código!",
+    "connectTitle": "Conecte-se:",
+    "questButtons": {
+      "about": "Sobre Mim (Status)",
+      "experiences": "Experiências (Log)",
+      "projects": "Projetos (Conquistas)",
+      "skills": "Habilidades (Talentos)"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim (Status do Personagem)",
+    "subtitle": "Minha História",
+    "mission": "Minha Missão",
+    "missionText": "Desenvolvedor Full-Stack com foco em front-end, apaixonado por performance, UX e código limpo. Especialista em React, Next.js, TypeScript e Node.js. Atuo como full-stack desenvolvendo funcionalidades criticas com Node.js no backend e React no frontend, com integrações complexas de APIs e foco em performance e segurança. Já liderei migração de Vue.js para React e atuei também no backend com Node.js, integrando múltiplas seguradoras via APIs.",
+    "interests": "Interesses",
+    "interestsList": {
+      "fullstack": "Desenvolvimento Full-Stack (React, Next.js, Node.js, Java, Go)",
+      "architecture": "Arquitetura de Microsserviços e Sistemas Escaláveis",
+      "performance": "Performance, Otimização e Segurança de Aplicações",
+      "mobile": "Desenvolvimento Mobile (React Native) e Soluções Web Modernas (PWAs)",
+      "integration": "Integração de Sistemas e APIs (Open Finance, Pagamentos)",
+      "ai": "Inteligência Artificial e Processamento de Linguagem Natural",
+      "quality": "Qualidade de Software e Automação de Testes"
+    },
+    "contact": "Informações de Contato",
+    "languages": "Idiomas (Pergaminhos Decifrados)"
+  },
+  "experiences": {
+    "title": "Experiências (Log de Aventuras)",
+    "subtitle": "Minha Jornada Profissional",
+    "mainTasks": "Principais Tarefas:",
+    "technologies": "Tecnologias Usadas:"
+  },
+  "projects": {
+    "title": "Projetos (Conquistas & Artefatos)",
+    "subtitle": "Minhas Conquistas",
+    "noProjects": "Nenhum projeto encontrado.",
+    "checkConsole": "Verifique o console para mais detalhes se for um desenvolvedor.",
+    "recentRepos": "Repositórios Recentes no GitHub",
+    "otherProjects": "Outros Projetos Destacados",
+    "viewOnGithub": "Ver no GitHub",
+    "topics": "Tópicos:",
+    "technologies": "Tecnologias:",
+    "viewProject": "Ver Projeto",
+    "viewRepo": "Ver Repositório",
+    "noDescription": "Sem descrição fornecida.",
+    "lastPush": "Último push:",
+    "forks": "Forks"
+  },
+  "skills": {
+    "title": "Arsenal de Habilidades (Skill Tree)",
+    "subtitle": "Meus Talentos",
+    "categories": {
+      "Frontend": "Frontend Dev (Interface Wizardry)",
+      "Backend": "Backend Dev (Server Sorcery)",
+      "Mobile": "Mobile Dev (Pocket Power)",
+      "DevOps": "DevOps & Infra (Cloud Command)",
+      "Testing": "QA & Testing (Bug Busters)",
+      "Outras": "Outras Habilidades (Versatile Skills)"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} {name}. Todos os direitos reservados.",
+    "builtWith": "Construído com Next.js, Tailwind CSS."
+  }
+}
